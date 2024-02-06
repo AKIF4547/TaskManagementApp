@@ -18,6 +18,7 @@ import {useDispatch} from 'react-redux';
 import moment from 'moment';
 import { useSharedSelector, useSharedDispatch, actionsApi } from '../handlingApi'
 import { createNewTask } from '../handlingApi/redux/actions/allTasks/createTask';
+import { useNavigation } from '@react-navigation/native';
 // import { addTask } from '../slice';
 
 const CalendarIcon = (props)=> (
@@ -42,6 +43,7 @@ export default function AddTask({navigation}) {
   //   const dispatch = useDispatch();
   
   const {isAddTask, addTaskLoader, isAddTaskFailed, clearAddTask, addTaskStatus} = useSharedSelector(state => state.createTask)
+
 
   const appDispatcher = useSharedDispatch(); 
 
@@ -115,9 +117,10 @@ export default function AddTask({navigation}) {
         userId: user.uid,
         taskName: taskName,
       }));
-
-      // Alert.alert('Success', 'Task is Successfully Added');
       // navigation.navigate('homeScreen');
+      isAddTask? navigation.navigate('homeScreen'): null
+
+
       // Clear the input field after adding the task
       setTask('');
       setDeadline(null);

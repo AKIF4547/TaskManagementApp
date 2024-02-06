@@ -29,7 +29,7 @@ export const createNewTask = createAsyncThunk(
       Alert.alert('Success', 'Task is Successfully Added');
     //   navigation.navigate('homeScreen');
       dispatch(addTaskSuccessState());
-    } catch (error) {
+    }catch (error) {
       console.error('Error adding task:', error.message);
       dispatch(addTaskFailedState());
     }
@@ -56,21 +56,21 @@ const addNewTask = createSlice({
     },
     addTaskLoadingState: (state, action) => {
       (state.addTaskLoader = true),
-        (state.isAddTask = []),
+        (state.isAddTask = null),
         (state.isAddTaskFailed = false),
         (state.clearAddTask = false);
       state.addTaskStatus = 'loading';
     },
     addTaskFailedState: (state, action) => {
       (state.addTaskLoader = false),
-        (state.isAddTask = []),
+        (state.isAddTask = null),
         (state.isAddTaskFailed = true),
         (state.clearAddTask = false),
         (state.addTaskStatus = 'failed');
     },
     addTaskClearState: (state, action) => {
         state.addTaskLoader = false,
-        state.isAddTask = [],
+        state.isAddTask = null ,
         state.isAddTaskFailed = false,
         state.clearAddTask = false
         state.addTaskStatus = 'idle'
