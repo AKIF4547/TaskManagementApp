@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "612121087062",
+    "project_id": "task-management-4105c",
+    "storage_bucket": "task-management-4105c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612121087062:android:6f30154a810478441c3ff7",
+        "android_client_info": {
+          "package_name": "com.tabletapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgXeAWNUGe1K8QbH3eUKnJ3UpVNXuKVfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
